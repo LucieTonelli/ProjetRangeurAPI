@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Rangeur.Domain.Models
 {
-    public class RoleRangeur
+    public class LevelRangeur
     {
         [Key]
-        public int IdRole { get; set; }
-        public string NomRole { get; set; } = "Standard";
+        public int IdLevelRangeur { get; set; } = 0;
+        public string NomLevelRangeur { get; set; } = "Apprenti";
         public ICollection<User>? Users { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace Rangeur.Domain.Models
         public required string DescriptionAttribute { get; set; }
         public int PointBonusMalus { get; set; } = 0;
 
-        public ICollection<Tache>? taches { get; set; }
+        public ICollection<Tache>? Taches { get; set; }
 
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Rangeur.DAL.Data.Configurations;
 using Rangeur.Domain.Models;
+
 
 namespace Rangeur.DAL
 {
@@ -12,7 +14,7 @@ namespace Rangeur.DAL
 
         public DbSet<Mission> Missions { get; set; }
 
-        public DbSet<RoleRangeur> RoleRangeurs { get; set; }
+        public DbSet<LevelRangeur> RoleRangeurs { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -20,5 +22,15 @@ namespace Rangeur.DAL
         {
             optionsBuilder.UseSqlServer("Server=E6K-VDI20415\\TFTIC;Database=DbRangeur;Trusted_Connection=True;TrustServerCertificate=True");
         }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+  
+        }
+
+
+
     }
 }

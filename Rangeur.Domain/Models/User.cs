@@ -14,7 +14,7 @@ namespace Rangeur.Domain.Models
         [Key]
         public int IdUser { get; set; }
         public required string PseudoUser { get; set; }
-        public required int IdRole { get; set; }
+        public required string Role { get; set; } = "Standard";
         public string? Nom { get; set; }
         public string? Prenom { get; set; }
         public DateTime? DateNaissance { get; set; }
@@ -29,5 +29,7 @@ namespace Rangeur.Domain.Models
         public ICollection<Mission>? Missions { get; set; }
 
         public int Score { get; set; }
+
+        public LevelRangeur? LevelRangeur { get; set; }
     }
 }
