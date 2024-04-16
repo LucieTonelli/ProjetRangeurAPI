@@ -18,7 +18,7 @@ namespace Rangeur.DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
         {
-            optionsBuilder.UseSqlServer("Server=E6K-VDI20415\\TFTIC;Database=DbTicket;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=E6K-VDI20415\\TFTIC;Database=DbRangeur;Trusted_Connection=True;TrustServerCertificate=True");
         }
     }
 }
