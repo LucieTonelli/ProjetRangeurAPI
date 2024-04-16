@@ -1,0 +1,6 @@
+@Rangeur_HostAddress = http://localhost:5125
+
+GET {{Rangeur_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
