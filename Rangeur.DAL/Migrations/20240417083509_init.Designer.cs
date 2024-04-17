@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rangeur.DAL;
 
@@ -11,9 +12,11 @@ using Rangeur.DAL;
 namespace Rangeur.DAL.Migrations
 {
     [DbContext(typeof(RangeurContext))]
-    partial class RangeurContextModelSnapshot : ModelSnapshot
+    [Migration("20240417083509_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
