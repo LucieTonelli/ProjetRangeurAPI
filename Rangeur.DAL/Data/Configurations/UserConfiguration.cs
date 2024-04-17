@@ -17,7 +17,7 @@ namespace Rangeur.DAL.Data.Configurations
 
             /*builder.Property(u => u.IdUser).ValueGeneratedOnAdd(); *///Id auto-incrémentés
 
-           builder.Property(p => p.IdUser).ValueGeneratedNever(); // retirer l'auto-incrémentation
+            builder.Property(p => p.IdUser).ValueGeneratedNever(); // retirer l'auto-incrémentation
 
 
             builder.HasData(

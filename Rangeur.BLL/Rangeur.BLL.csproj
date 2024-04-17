@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rangeur.DAL\Rangeur.DAL.csproj" />
-    <ProjectReference Include="..\Rangeur.Domain\Rangeur.Domain.csproj" />
+    <PackageReference Include="SendGrid" Version="9.29.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Rangeur.DAL\Rangeur.DAL.csproj" />
+    <ProjectReference Include="..\Rangeur.Domain\Rangeur.Domain.csproj" />
   </ItemGroup>
 
 </Project>
