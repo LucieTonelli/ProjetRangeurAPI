@@ -12,19 +12,16 @@ namespace Rangeur.DAL.Repositories
     {
         private readonly RangeurContext _context;
 
-        public UserEntityRepository(RangeurContext context)
+        public UserEntityRepository (RangeurContext context)
         {
             _context = context;
         }
-      
-
         public User Create(User user)
         {
             _context.Users.Add(user);
             _context.SaveChanges();
             return user;
         }
-
 
         //public bool Delete(int idUser)
         //{

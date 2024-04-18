@@ -13,11 +13,9 @@ namespace Rangeur.BLL.Services
 {
     public class UserService : IUserService
     {
+        private readonly IUserRepository _repository;
 
-        private readonly UserEntityRepository _repository;
-
-        public UserService(UserEntityRepository repository)
-
+        public UserService (IUserRepository repository)
         {
             _repository = repository;
         }

@@ -11,11 +11,9 @@ namespace Rangeur.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IUserService _service;
 
-        private readonly UserService _service;
-
-        public UserController(UserService service)
-
+        public UserController(IUserService service)
         {
             _service = service;
         }
