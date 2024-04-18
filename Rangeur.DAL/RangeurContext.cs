@@ -27,7 +27,11 @@ namespace Rangeur.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
-  
+            modelBuilder.ApplyConfiguration(new TacheConfiguration());
+            modelBuilder.ApplyConfiguration(new MissionConfiguration());
+            modelBuilder.ApplyConfiguration(new LevelRangeurConfiguration());
+            modelBuilder.ApplyConfiguration(new BonusMalusConfiguration());
+
         }
 
 

@@ -13,14 +13,17 @@ namespace Rangeur.DAL.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasIndex(hi => hi.PseudoUser).IsUnique(); //Ajout d'un index sur la colonne Pseudo
+            builder.HasIndex(p => p.PseudoUser).IsUnique(); //Ajout d'un index sur la colonne Pseudo
 
-            builder.Property(u => u.IdUser).ValueGeneratedOnAdd(); //Id auto-incrémentés
+            /*builder.Property(u => u.IdUser).ValueGeneratedOnAdd(); *///Id auto-incrémentés
+
+            builder.Property(p => p.IdUser).ValueGeneratedNever(); // retirer l'auto-incrémentation
 
 
             builder.HasData(
                 new User
                 {
+                    IdUser = 1,
                     PseudoUser = "ArianaGrande",
                     Role = "Standard",
                     Nom = "Grande",
@@ -34,6 +37,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 2,
                     PseudoUser = "EdSheeran",
                     Role = "Standard",
                     Nom = "Sheeran",
@@ -47,6 +51,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 3,
                     PseudoUser = "Beyonce",
                     Role = "Standard",
                     Nom = "Knowles",
@@ -59,7 +64,8 @@ namespace Rangeur.DAL.Data.Configurations
                     Score = 200
                 },
                 new User
-                {
+                {   
+                    IdUser = 4,
                     PseudoUser = "TomHanks",
                     Role = "Standard",
                     Nom = "Hanks",
@@ -73,6 +79,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 5,
                     PseudoUser = "JenniferLawrence",
                     Role = "Standard",
                     Nom = "Lawrence",
@@ -86,6 +93,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 6,
                     PseudoUser = "LeonardoDiCaprio",
                     Role = "Standard",
                     Nom = "DiCaprio",
@@ -99,6 +107,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 7,
                     PseudoUser = "BradPitt",
                     Role = "Standard",
                     Nom = "Pitt",
@@ -112,6 +121,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 8,
                     PseudoUser = "ScarlettJohansson",
                     Role = "Standard",
                     Nom = "Johansson",
@@ -125,6 +135,7 @@ namespace Rangeur.DAL.Data.Configurations
                 },
                 new User
                 {
+                    IdUser = 9,
                     PseudoUser = "DenzelWashington",
                     Role = "Standard",
                     Nom = "Washington",
@@ -133,6 +144,21 @@ namespace Rangeur.DAL.Data.Configurations
                     Email = "denzel.washington@example.com",
                     Telephone = 777888999,
                     Password = "password789",
+                    DateDerniereConnexion = DateTime.Now,
+                    Score = 250
+                },
+
+                new User
+                {
+                    IdUser = 10,
+                    PseudoUser = "Lucie",
+                    Role = "Admin",
+                    Nom = "Tonelli",
+                    Prenom = "Lucie",
+                    DateNaissance = new DateTime(1982, 03, 10),
+                    Email = "lucietonelli@gmail.com",
+                    Telephone = 777888999,
+                    Password = "password123",
                     DateDerniereConnexion = DateTime.Now,
                     Score = 250
                 }
